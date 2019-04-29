@@ -1,0 +1,388 @@
+/*--------------------------------------------------
+    Base
+--------------------------------------------------*/
+* {box-sizing: border-box;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    background: url("./images/headerCobbles.png") no-repeat center center fixed;
+    background-size: cover;
+}
+/*--------------------------------------------------
+    Header
+--------------------------------------------------*/
+.q-header {
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+    align-self: center;
+    position: absolute;
+    height: 10vh;
+    top: 0;
+    border-bottom: 1px solid #ffffff;
+    width: 100%;
+}
+
+.q-header h1 {
+    align-self: center;
+}
+/*--------------------------------------------------
+    Question number and score tracking
+--------------------------------------------------*/
+.question-score {
+    visibility: hidden;
+    align-self: center;
+    display: flex;
+    justify-content: space-between;
+    height: 10vh;
+    flex-direction: row;
+    font-size: 20px;
+    color: #ffffff;
+    text-shadow: 1px 1px #000000;
+    width: 50%;
+}
+
+.question-div {
+    align-self: center;
+    display: flex;
+}
+
+.score-div {
+    align-self: center;
+    display: flex;
+}
+
+label {
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    color: #ffffff;
+    background-color: silver;
+    border: 1px #ffffff solid;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    line-height: 20px
+}
+label:hover, label:focus {
+    background-color: #4a86a8;
+    border: 1px #ffffff solid;
+}
+fieldset {
+    border: none;
+}
+
+fieldset legend {
+    font-weight: bold;
+    font-size: 20px;
+    color: #ffffff;
+    text-shadow: 1px 1px #000000;
+    margin-bottom: 10px;
+}
+
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #ffffff;
+    outline: none;
+    margin-right: 5px;
+    position: relative;
+    top: 2px;
+}
+input:checked {
+    border: 8px solid #2b4d6f;
+}
+input[type=radio] {
+    flex: 0 0 auto;
+    margin-right: 10px;
+}
+
+form button {
+    padding: 15px;
+    border: 1px #ffffff solid;
+    background-color: #4a86a8;
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    border-radius: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    width: 80%;
+    text-align: left;
+}
+
+/*--------------------------------------------------
+    Main container for start button, quiz
+    question/answers, feedback, and final results.
+--------------------------------------------------*/
+.q-main {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    border: 0;
+    height: 70vh;
+    width: 75%;
+}
+
+.start-screen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.start-screen button  {
+    align-self: center;
+    width: 50%;
+}
+/*--------------------------------------------------
+    Feedback
+--------------------------------------------------*/
+.feedback {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+}
+
+.feedback > p {
+    color: #ffffff;
+    background-color: #4a86a8;
+    border: 1px #ffffff solid;
+    padding: 15px;
+    margin: 0;
+}
+
+.feedback p:first-child {
+    background-color: transparent;
+    border: 0;
+    font-weight: bold;
+    font-size: 20px;
+    color: #ffffff;
+    text-shadow: 1px 1px #000000;
+    text-align: center;
+    margin: 0;
+}
+
+.feedback button {
+    align-self: center;
+    padding: 15px;
+    border: 1px #ffffff solid;
+    background-color: #4a86a8;
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    border-radius: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    /*height: 100%;*/
+    text-align: center;
+}
+
+.feedback button:hover {
+    border: 1px #ffffff solid;
+    box-shadow: 1px 1px 1px #EAEAEA;
+    color: #333333;
+    background: #c0c0c0;
+    color: #ffffff;
+}
+
+.feedback img {
+    align-self: center;
+    max-width: 375px;
+    height: auto;
+}
+
+/*--------------------------------------------------
+    Feedback
+--------------------------------------------------*/
+.final-feedback {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+}
+
+.final-feedback > p {
+    text-align: center;
+    color: #ffffff;
+    background-color: #4a86a8;
+    border: 1px #ffffff solid;
+    padding: 15px;
+    margin: 0;
+}
+
+.final-feedback button {
+    align-self: center;
+    padding: 15px;
+    border: 1px #ffffff solid;
+    background-color: #4a86a8;
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    border-radius: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    /*height: 100%;*/
+    text-align: center;
+}
+
+.final-feedback button:hover {
+    border: 1px #ffffff solid;
+    box-shadow: 1px 1px 1px #EAEAEA;
+    color: #333333;
+    background: #c0c0c0;
+    color: #ffffff;
+}
+
+.final-feedback img {
+    align-self: center;
+    max-width: 375px;
+    height: auto;
+}
+
+
+@media only screen and (min-width: 500px) {
+    .feedback img {
+        max-width: 450px;
+        height: auto;
+    }
+
+    .final-feedback img {
+        max-width: 450px;
+        height: auto;
+    }
+}
+
+
+@media only screen and (min-width: 650px) {
+    .feedback img {
+        max-width: 600px;
+        height: auto;
+    }
+
+    .final-feedback img {
+        max-width: 600px;
+        height: auto;
+    }
+
+    .feedback {
+        margin-bottom: 10px;
+    }
+}
+
+/*--------------------------------------------------
+    Questions and choices
+--------------------------------------------------*/
+.question-choices {
+    display: none;
+    justify-content: center;
+    align-self: center;
+    border: 0;
+    height: auto;
+    width: 100%;
+}
+
+.question-form{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin: 0;
+}
+
+.submitButton-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.submitButton {
+    padding: 15px;
+    border: 1px #ffffff solid;
+    background-color: #4a86a8;
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    border-radius: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.submitButton:hover {
+    border: 1px #ffffff solid;
+    box-shadow: 1px 1px 1px #EAEAEA;
+    color: #333333;
+    background: #c0c0c0;
+    color: #ffffff;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: left;
+    margin-top: 0;
+    width: 100%;
+    border: 0;
+}
+
+/*--------------------------------------------------
+    Footer
+--------------------------------------------------*/
+.q-footer {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    position: absolute;
+    bottom: 0;
+    background-color: #ffffff;
+    border-top: 1px solid #ffffff;
+    height: 5vh;
+    width: 100%;
+
+}
+
+.q-footer p {
+    align-self: center;
+}
+/*--------------------------------------------------
+    Radio, Start and Submit Buttons
+--------------------------------------------------*/
+.start-screen .start-button {
+    padding: 15px;
+    border: 1px #ffffff solid;
+    background-color: #4a86a8;
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    border-radius: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 75%;
+    text-align: center;
+}
+
+.start-button:hover {
+    border: 1px #ffffff solid;
+    box-shadow: 1px 1px 1px #EAEAEA;
+    color: #333333;
+    background: #c0c0c0;
+    color: #ffffff;
+}
