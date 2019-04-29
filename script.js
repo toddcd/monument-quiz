@@ -23,7 +23,7 @@ function generateQuestions() {
                   <fieldset>
                     <legend>${QUIZ_DATA.questions[idx].text}</legend>
                     ${radioButtonChoices}
-                    <button type="submit" class="submitButton">Attack</button>
+                    <button type="submit" class="submitButton">Submit</button>
                   </fieldset>
                 </form>`
     } else {
@@ -153,7 +153,7 @@ function generateAnswerFeedback(result) {
           <p>${feedback}</p>
           <p>${QUIZ_DATA.questions[idx].desc}</p>
           <img src=${src} alt=${alt}/>
-          <button type=button class="nextButton">Take Another Pull</button>
+          <button type=button class="nextButton">Next</button>
           </div>`
     );
 }

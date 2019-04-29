@@ -30,9 +30,15 @@ body {
     width: 100%;
 }
 
-.q-header h1 {
+.q-header div {
     align-self: center;
+    font-size: xx-large;
 }
+
+div span {
+    font-weight: bolder;
+}
+
 /*--------------------------------------------------
     Question number and score tracking
 --------------------------------------------------*/
