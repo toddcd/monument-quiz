@@ -3,7 +3,7 @@ const QUIZ_DATA = {
         {
             id: 1,
             text: "Which of the following bicycle races are considered a Monument?",
-            desc: "At the top of world tour cycling are 5 of the longest, hardest and most prestigious one-day races in professional cycling. These are considered the Monuments.",
+            desc: "All of the races listed are considered Monuments. They are the hardest and most prestigious one-day races in professional cycling.",
             choices:
                 [{text: "Milan-San Remo"},
                     {text: "Tour of Flanders"},
