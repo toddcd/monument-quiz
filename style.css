@@ -350,7 +350,7 @@ fieldset {
     display: flex;
     justify-content: center;
     align-self: center;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     background-color: #ffffff;
     border-top: 1px solid #ffffff;
