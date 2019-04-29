@@ -34,7 +34,7 @@ const QUIZ_DATA = {
         {
             id: 3,
             text: "What cyclist has won the most Monuments during their career?",
-            desc: "The Belgin cyclist Eddy Merckx won 19 Momuments and is considered the greatest of all times. He won: 7-Milan-San Remo, 2-Tour of Flanders, 3-Paris-Roubaix, 5-Liege-Bastogne-Liege, 2-Giro di Lombardia",
+            desc: "The Belgian cyclist Eddy Merckx won 19 Monuments and is considered the greatest of all times. He won: 7-Milan-San Remo, 2-Tour of Flanders, 3-Paris-Roubaix, 5-Liege-Bastogne-Liege, 2-Giro di Lombardia",
             choices:
                 [{text: "Fausto Coppi"},
                     {
@@ -64,8 +64,8 @@ const QUIZ_DATA = {
         },
         {
             id: 5,
-            text: 'Which country does NOT host one of cycling\'s Monuments?',
-            desc: 'Germany does not host a Monument. Italy and Belgium both host 2 and France host 1.',
+            text: 'Which country is NOT a host of a cycling Monument?',
+            desc: 'Germany does not host a Monument. Italy hosts two, Belgium hosts two and France hosts one.',
             choices:
                 [{
                     text: "Germany",
