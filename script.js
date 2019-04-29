@@ -13,7 +13,7 @@ function generateQuestions() {
         // generate radio button choices for the current question
         const radioButtonChoices = QUIZ_DATA.questions[idx].choices.map(q => {
             return `<label class="answerOption">
-                   <input type="radio" value="${q.isCorrect}" name="choice" required>
+                   <input type="radio" value=${q.isCorrect} name="choice" required>
                    <span>${q.text}</span>
                  </label>`
 
@@ -53,21 +53,18 @@ function updateQuestionCount(reset = false) {
     } else {
         $('#questionCount').text("0"+"/"+QUIZ_DATA.questions.length);
     }
-
 }
 
 function updateScore(reset = false) {
     if (!reset) {
         $('#score').text(QUIZ_DATA.answers.filter(q => {
-            return q === "correct";
+            return q === 'correct';
         }).length);
     } else {
         $('#score').text(0);
     }
 }
 
-// a answer chose has been select. Determine correct
-// or wrong, generate resonse and update score
 function userSelectAnswer() {
     $('form').on('submit', function (event) {
         event.preventDefault();
@@ -82,32 +79,32 @@ function userSelectAnswer() {
         }
 
         if (QUIZ_DATA.answers.length === QUIZ_DATA.questions.length){
-            $('.nextButton').text("Finish Line");
+            $('.nextButton').text('Finish Line');
         }
     });
 }
 
 function generateFinalScore() {
-    let feedback = "";
-    let src = "";
-    let alt = "final score picture";
+    let feedback = '';
+    let src = '';
+    let alt = 'final score picture';
     let score = $("#score").text();
 
     if (score == 5) {
-        feedback = "Congratulations! You crushed it and won!"
-        src = "./images/merckxPodium.jpg";
+        feedback = 'Congratulations! You crushed it and won!';
+        src = './images/merckxPodium.jpg';
     } else if (score >= 2 && score <= 4) {
-        feedback = "Bittersweet! You were so close to the win but just missed out!"
-        src = "./images/runnerup.jpg";
+        feedback = 'Bittersweet! You were so close to the win, but just missed out!';
+        src = './images/runnerup.jpg';
     } else {
-        feedback = "Better luck next time. You were dropped from the race and did not finish."
-        src = "./images/bauerLost.jpg";
+        feedback = 'Better luck next time. You were dropped from the race and did not finish.';
+        src = './images/bauerLost.jpg';
     }
 
     $('.question-choices').html(
         `<div class="final-feedback">
-          <p>"${feedback}"</p>
-          <img src="${src}" alt="${alt}"/>
+          <p>${feedback}</p>
+          <img src=${src} alt=${alt}/>
           <button class="restart" type="submit">Restart</button>
          </div>`
     );
@@ -128,9 +125,9 @@ function restart() {
 
 function generateAnswerFeedback(result) {
     let idx = 0;
-    let src = "";
-    let alt = "";
-    let feedback = "";
+    let src = '';
+    let alt = '';
+    let feedback = '';
 
     // get decsription explaning correct answer
     if (QUIZ_DATA.answers.length > 0) {
@@ -139,14 +136,13 @@ function generateAnswerFeedback(result) {
 
     // set correct or wrong image and alt
     if (result === "correct") {
-        alt = "Bob Jungles winning";
-        //src="./images/merckxWinning.jpg";
+        alt = 'Bob Jungles winning';
         src = './images/jungelsWin.jpg';
-        feedback = "Winning!!!";
+        feedback = 'Winning!';
     } else {
-        alt = "Gustav Larsen Crashing";
+        alt = 'Gustav Larsen Crashing';
         src = './images/gustavCrash.jpg';
-        feedback = "Losing!!!";
+        feedback = 'Losing!';
     }
 
     updateScore();
@@ -154,9 +150,9 @@ function generateAnswerFeedback(result) {
     // generate html for answer reveal
     $('.question-choices').html(
         `<div class="feedback">
-          <p>"${feedback}"</p>
+          <p>${feedback}</p>
           <p>${QUIZ_DATA.questions[idx].desc}</p>
-          <img src="${src}" alt="${alt}"/>
+          <img src=${src} alt=${alt}/>
           <button type=button class="nextButton">Take Another Pull</button>
           </div>`
     );
